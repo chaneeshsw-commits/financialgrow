@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login | FinGrowth</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: url("https://images.unsplash.com/photo-1561414927-6d86591d0c4f") no-repeat center center/cover;
+      font-family: Arial, sans-serif;
+    }
+
+    .login-box {
+      width: 350px;
+      padding: 30px;
+      border-radius: 15px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+      color: white;
+      text-align: center;
+    }
+
+    .login-box h2 {
+      margin-bottom: 20px;
+      color: cyan;
+    }
+
+    .login-box input {
+      width: 90%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      outline: none;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+    }
+
+    .login-box input::placeholder {
+      color: #ddd;
+    }
+
+    .password-container {
+      position: relative;
+      width: 90%;
+      margin: auto;
+    }
+
+    .password-container input {
+      width: 100%;
+    }
+
+    .toggle-password {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      color: cyan;
+      font-size: 14px;
+    }
+
+    .login-box button {
+      margin-top: 15px;
+      padding: 12px;
+      width: 95%;
+      background: cyan;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .login-box button:hover {
+      background: lime;
+    }
+
+    .login-box a {
+      display: block;
+      margin-top: 10px;
+      color: #ddd;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .login-box a:hover {
+      color: cyan;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-box">
+    <h2>Login</h2>
+    <form onsubmit="return goDashboard(event)">
+      <input type="text" placeholder="Username" required>
+      
+      <div class="password-container">
+        <input type="password" id="password" placeholder="Password" required>
+        <span class="toggle-password" onclick="togglePassword()">👁️</span>
+      </div>
+
+      <button type="submit">Login</button>
+      <a href="register.html">Create Account</a>
+      <a href="forgot.html">Forgot Password?</a>
+    </form>
+  </div>
+
+  <script>
+    function togglePassword() {
+      let pwd = document.getElementById("password");
+      if (pwd.type === "password") {
+        pwd.type = "text";
+      } else {
+        pwd.type = "password";
+      }
+    }
+
+    function goDashboard(event) {
+      event.preventDefault();
+      window.location.href = "dashboard.html";
+    }
+  </script>
+
+</body>
+</html>

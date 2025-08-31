@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register | FinGrowth</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: url("https://images.unsplash.com/photo-1542744173-8e7e53415bb0") no-repeat center center/cover;
+      font-family: Arial, sans-serif;
+    }
+
+    .register-box {
+      width: 380px;
+      padding: 35px;
+      border-radius: 15px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+      color: white;
+      text-align: center;
+    }
+
+    .register-box h2 {
+      margin-bottom: 20px;
+      color: cyan;
+    }
+
+    .register-box input {
+      width: 90%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      outline: none;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+    }
+
+    .register-box input::placeholder {
+      color: #ddd;
+    }
+
+    .password-container {
+      position: relative;
+      width: 90%;
+      margin: auto;
+    }
+
+    .password-container input {
+      width: 100%;
+    }
+
+    .toggle-password {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      color: cyan;
+      font-size: 14px;
+    }
+
+    .register-box button {
+      margin-top: 15px;
+      padding: 12px;
+      width: 95%;
+      background: cyan;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .register-box button:hover {
+      background: lime;
+    }
+
+    .register-box a {
+      display: block;
+      margin-top: 10px;
+      color: #ddd;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .register-box a:hover {
+      color: cyan;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="register-box">
+    <h2>Create Account</h2>
+    <form onsubmit="return goLogin(event)">
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <input type="text" placeholder="Username" required>
+
+      <div class="password-container">
+        <input type="password" id="password" placeholder="Password" required>
+        <span class="toggle-password" onclick="togglePassword('password')"></span>
+      </div>
+
+      <div class="password-container">
+        <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+        <span class="toggle-password" onclick="togglePassword('confirmPassword')"></span>
+      </div>
+
+      <button type="submit">Register</button>
+      <a href="login.html">Already have an account? Login</a>
+    </form>
+  </div>
+
+  <script>
+    function togglePassword(fieldId) {
+      let pwd = document.getElementById(fieldId);
+      if (pwd.type === "password") {
+        pwd.type = "text";
+      } else {
+        pwd.type = "password";
+      }
+    }
+
+    function goLogin(event) {
+      event.preventDefault();
+      alert("Registration successful ✅ Redirecting to Login...");
+      window.location.href = "login.html";
+    }
+  </script>
+
+</body>
+</html>
