@@ -1,0 +1,234 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FinGrowth - Financial & Business Hub</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #0a0a0a;
+      color: #fff;
+    }
+
+    /* Navbar */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #111;
+      padding: 15px 50px;
+      border-bottom: 2px solid cyan;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav h1 {
+      font-size: 24px;
+      color: cyan;
+      letter-spacing: 2px;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 25px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: lime;
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                  url("https://t3.ftcdn.net/jpg/02/31/29/72/360_F_231297252_HAx1Lp9MDYKgaQB6rF37SYDdtARu8EwG.jpg") no-repeat center/cover;
+      padding: 50px;
+    }
+
+    .hero h2 {
+      font-size: 50px;
+      color: cyan;
+      text-shadow: 0 0 20px cyan;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      max-width: 700px;
+      font-size: 20px;
+      margin-bottom: 30px;
+      color: #ddd;
+    }
+
+    .hero .btn-group {
+      display: flex;
+      gap: 20px;
+    }
+
+    .hero a {
+      padding: 14px 35px;
+      background: cyan;
+      color: black;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 10px;
+      transition: 0.3s;
+      box-shadow: 0 0 15px cyan;
+    }
+
+    .hero a:hover {
+      background: lime;
+      box-shadow: 0 0 20px lime;
+    }
+
+    /* Features Section */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      padding: 60px 50px;
+      background: #111;
+    }
+
+    .feature-box {
+      background: #1a1a1a;
+      padding: 25px;
+      border-radius: 15px;
+      text-align: center;
+      border: 2px solid cyan;
+      transition: 0.3s;
+    }
+
+    .feature-box:hover {
+      transform: translateY(-8px);
+      border-color: lime;
+    }
+
+    .feature-box h3 {
+      color: cyan;
+      margin-bottom: 15px;
+    }
+
+    .feature-box p {
+      color: #ccc;
+      font-size: 15px;
+    }
+
+    /* Call to Action */
+    .cta {
+      background: #0f0f0f;
+      padding: 60px;
+      text-align: center;
+      border-top: 2px solid cyan;
+      border-bottom: 2px solid cyan;
+    }
+
+    .cta h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: lime;
+    }
+
+    .cta a {
+      padding: 14px 30px;
+      background: lime;
+      color: black;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: 0.3s;
+      box-shadow: 0 0 15px lime;
+    }
+
+    .cta a:hover {
+      background: cyan;
+      box-shadow: 0 0 20px cyan;
+    }
+
+    /* Footer */
+    footer {
+      background: #111;
+      text-align: center;
+      padding: 20px;
+      border-top: 2px solid cyan;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <h1>💹 FinancialGrowth</h1>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+    
+      
+      <li><a href="blog.html">Blogs</a></li>
+      <li><a href="services.html">Services</a></li>
+      
+      
+      <li><a href="business-news.html">News</a></li>
+      <li><a href="updates.html">Updates</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h2>Empowering Traders & Business Leaders</h2>
+    <p>Get real-time insights, business strategies, and financial updates to grow your wealth and take smarter decisions in trading & business.</p>
+    <div class="btn-group">
+      <a href="login.html">Login</a>
+      <a href="sign up.html">Sign Up</a>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features">
+    <div class="feature-box">
+      <h3>📈 Live Market Insights</h3>
+      <p>Track real-time charts, trading data, and financial signals to make smarter moves.</p>
+    </div>
+    <div class="feature-box">
+      <h3>🌍 Global Business News</h3>
+      <p>Stay updated with global economic trends, business opportunities, and market policies.</p>
+    </div>
+    <div class="feature-box">
+      <h3>🤝 Networking Hub</h3>
+      <p>Connect with traders, entrepreneurs, and professionals to grow together.</p>
+    </div>
+    <div class="feature-box">
+      <h3>📊 Analytics & Reports</h3>
+      <p>Access AI-driven analytics and financial reports for informed decision making.</p>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="cta">
+    <h2>Ready to Grow Your Financial Future?</h2>
+    <a href="sign up.html">Get Started Today</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 FinGrowth | Built for Business Leaders & Traders</p>
+  </footer>
+</body>
+</html>
